@@ -1,0 +1,17 @@
+package com.sagwa.blog;
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * @Author Sagwa
+ * @Date 2022/10/30 9:43
+ * @ClassName BlogAoo
+ */
+@SpringBootApplication
+public class BlogApp {
+    public static void main(String[] args) {
+        SpringApplication.run(BlogApp.class, args);
+    }
+}
