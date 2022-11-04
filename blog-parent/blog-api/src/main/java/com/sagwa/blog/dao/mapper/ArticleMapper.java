@@ -1,8 +1,11 @@
 package com.sagwa.blog.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.sagwa.blog.dao.dos.Archives;
 import com.sagwa.blog.dao.pojo.Article;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * @Author Sagwa
@@ -11,5 +14,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface ArticleMapper extends BaseMapper<Article> {
-
+    List<Archives> listArchives();
 }

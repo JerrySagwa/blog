@@ -2,6 +2,7 @@ package com.sagwa.blog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.sagwa.blog.dao.dos.Archives;
 import com.sagwa.blog.dao.mapper.ArticleMapper;
 import com.sagwa.blog.dao.mapper.TagMapper;
 import com.sagwa.blog.dao.pojo.Article;
@@ -57,6 +58,12 @@ public class ArticleServiceImpl implements ArticleService {
         wrapper.last("limit " + limit);
         List<Article> articles = articleMapper.selectList(wrapper);
         return Result.success(copyList(articles, false, false));
+    }
+
+    @Override
+    public Result listArchives() {
+        List<Archives> archives = articleMapper.listArchives();
+        return Result.success(archives);
     }
 
     @Override
