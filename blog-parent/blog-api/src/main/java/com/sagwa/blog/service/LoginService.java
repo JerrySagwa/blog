@@ -1,5 +1,6 @@
 package com.sagwa.blog.service;
 
+import com.sagwa.blog.dao.pojo.SysUser;
 import com.sagwa.blog.vo.Result;
 import com.sagwa.blog.vo.params.LoginParam;
 
@@ -10,4 +11,8 @@ import com.sagwa.blog.vo.params.LoginParam;
  */
 public interface LoginService {
     Result login(LoginParam loginParam);
+
+    SysUser checkToken(String token);
+
+    Result logout(String token);
 }

@@ -11,4 +11,5 @@ import lombok.Data;
 public class LoginParam {
     private String account;
     private String password;
+    private String nickname;
 }

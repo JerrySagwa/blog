@@ -24,7 +24,7 @@ public class JWTUtils {
         Map<String,Object> claims = new HashMap<>();
         claims.put("userId",userId);
         JwtBuilder jwtBuilder = Jwts.builder()
-                // Header
+                // Header {"type":"JWT","alg":"HS256"} 固定
                 .signWith(SignatureAlgorithm.HS256, jwtToken) // 签发算法，秘钥为jwtToken
                 // body
                 .setClaims(claims) // body数据，要唯一，自行设置

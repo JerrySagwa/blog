@@ -1,6 +1,7 @@
 package com.sagwa.blog.service;
 
 import com.sagwa.blog.dao.pojo.SysUser;
+import com.sagwa.blog.vo.Result;
 
 /**
  * @Author Sagwa
@@ -11,4 +12,10 @@ public interface SysUserService {
     SysUser findUserById(Long id);
 
     SysUser findUser(String account, String password);
+
+    Result getUserInfoByToken(String token);
+
+    SysUser finUserByAccount(String account);
+
+    void save(SysUser user);
 }

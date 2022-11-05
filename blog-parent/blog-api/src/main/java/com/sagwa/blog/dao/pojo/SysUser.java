@@ -1,5 +1,6 @@
 package com.sagwa.blog.dao.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 /**
@@ -9,7 +10,6 @@ import lombok.Data;
  */
 @Data
 public class SysUser {
-
     private Long id;
 
     private String account;
